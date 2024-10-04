@@ -36,4 +36,5 @@ yarn-error.log*
 todos.md
 .npmrc
 .yarnrc
+.yarn
 # .env
