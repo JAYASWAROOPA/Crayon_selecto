@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, ProgressBarAndroid } from 'react-native';
 import {React,useState} from 'react';
-import { styles } from './Styles1';
-export default function Designcontainer({ title }) {
+import { styles } from './styleDesign1';
+export default function Designcontainer1({ title }) {
     const [showFullText, setShowFullText] = useState(false);
     const toggleDescription = () => {
       setShowFullText(!showFullText);

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
-import Down from '../assets/icons/down';
-import { styles } from './Styles1';
+import Down from '../../assets/icons/down';
+import { styles } from './styleDesign2';
 export default function DesignContainer2() {
   const [showFullText, setShowFullText] = useState(false);
 

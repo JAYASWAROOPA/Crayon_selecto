@@ -3,9 +3,9 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
 import Metanas_ui_design from './src/screens/Metanas_ui_design/Metanas_ui_design.jsx'
-import MembersModel from './src/components/Membersmodel.jsx'
+import MembersModel from './src/components/MembersModal/membersModel.jsx'
 import WorkSpace from './src/screens/WorkSpace/WorkSpace.jsx'
-import CreateExpense from './src/components/Createexpense.jsx'
+import CreateExpense from './src/components/Createexpense/createExpense.jsx'
 const Stack =createStackNavigator()
 export default function App() {
   return (

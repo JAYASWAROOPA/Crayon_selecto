@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, Modal, TouchableOpacity } from 'react-native';
-import { styles } from './Styles1';
+import { styles } from './styleMember';
 
 export default function MembersModel({title}) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -12,11 +12,11 @@ export default function MembersModel({title}) {
       <TouchableOpacity onPress={() => setModalVisible(true)}>
         <View style={styles.membersContainer}>
           <Image
-            source={require('../assets/images/lady2.png')}
+            source={require('../../assets/images/lady2.png')}
             style={styles.avatar}
           />
           <Image
-            source={require('../assets/images/men2.png')}
+            source={require('../../assets/images/men2.png')}
             style={styles.avatar}
           />
           <View style={styles.extraMembers}>
@@ -37,28 +37,28 @@ export default function MembersModel({title}) {
 
             <View style={styles.memberList}>
               <View style={styles.memberItem}>
-                <Image source={require('../assets/images/men1.png')} style={styles.memberImage} />
+                <Image source={require('../../assets/images/men1.png')} style={styles.memberImage} />
                 <View>
                   <Text style={styles.memberName}>Mohammed</Text>
                   <Text style={styles.memberEmail}>abdul_metanas@gmail.com</Text>
                 </View>
               </View>
               <View style={styles.memberItem}>
-                <Image source={require('../assets/images/men2.png')} style={styles.memberImage} />
+                <Image source={require('../../assets/images/men2.png')} style={styles.memberImage} />
                 <View>
                   <Text style={styles.memberName}>Aaban</Text>
                   <Text style={styles.memberEmail}>aaban_metanas@gmail.com</Text>
                 </View>
               </View>
               <View style={styles.memberItem}>
-                <Image source={require('../assets/images/lady2.png')} style={styles.memberImage} />
+                <Image source={require('../../assets/images/lady2.png')} style={styles.memberImage} />
                 <View>
                   <Text style={styles.memberName}>Hamza</Text>
                   <Text style={styles.memberEmail}>hamza_metanas@gmail.com</Text>
                 </View>
               </View>
               <View style={styles.memberItem}>
-                <Image source={require('../assets/images/emptymen.png')} style={styles.memberImage} />
+                <Image source={require('../../assets/images/emptymen.png')} style={styles.memberImage} />
                 <View>
                   <Text style={styles.memberName}>Abbas</Text>
                   <Text style={styles.memberEmail}>abbas_metanas@gmail.com</Text>

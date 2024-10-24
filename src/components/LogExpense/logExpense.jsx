@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Modal, TextInput } from 'react-native';
-import { styles } from './Styles1';
+import { styles } from './styleLog';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
@@ -84,22 +84,22 @@ export default function LogExpense() {
                 visible={modalVisible}
                 onRequestClose={() => setModalVisible(false)}
             >
-                <View style={modalStyles.modalOverlay}>
-                    <View style={modalStyles.modalContainer}>
-                        <Text style={modalStyles.modalTitle}>Create expense</Text>
+                <View style={styles.modalOverlay}>
+                    <View style={styles.modalContainer}>
+                        <Text style={styles.modalTitle}>Create expense</Text>
 
-                        <Text style={modalStyles.label}>Expense name *</Text>
+                        <Text style={styles.label}>Expense name *</Text>
                         <TextInput
-                            style={modalStyles.input}
+                            style={styles.input}
                             placeholder="Expense 01"
                             value={expenseName}
                             onChangeText={setExpenseName}
                         />
 
-                        <Text style={modalStyles.label}>Date *</Text>
+                        <Text style={styles.label}>Date *</Text>
                         <TouchableOpacity
                             onPress={() => setShowDatePicker(true)}
-                            style={modalStyles.datePicker}
+                            style={styles.datePicker}
                         >
                             <Text>{date.toLocaleDateString()}</Text>
                         </TouchableOpacity>
@@ -112,23 +112,23 @@ export default function LogExpense() {
                             />
                         )}
 
-                        <View style={modalStyles.row}>
-                            <View style={modalStyles.rowItem}>
-                                <Text style={modalStyles.label}>Currency *</Text>
+                        <View style={styles.row}>
+                            <View style={styles.rowItem}>
+                                <Text style={styles.label}>Currency *</Text>
                                 <Picker
                                     selectedValue={currency}
                                     onValueChange={(itemValue) => setCurrency(itemValue)}
-                                    style={modalStyles.picker}
+                                    style={styles.picker}
                                 >
                                     <Picker.Item label="AED" value="AED" />
                                     <Picker.Item label="USD" value="USD" />
                                     
                                 </Picker>
                             </View>
-                            <View style={modalStyles.rowItem}>
-                                <Text style={modalStyles.label}>Amount *</Text>
+                            <View style={styles.rowItem}>
+                                <Text style={styles.label}>Amount *</Text>
                                 <TextInput
-                                    style={modalStyles.input}
+                                    style={styles.input}
                                     placeholder="2145"
                                     keyboardType="numeric"
                                     value={amount}
@@ -137,39 +137,35 @@ export default function LogExpense() {
                             </View>
                         </View>
 
-                        {/* Category */}
-                        <Text style={modalStyles.label}>Category *</Text>
+                        <Text style={styles.label}>Category *</Text>
                         <Picker
                             selectedValue={category}
                             onValueChange={(itemValue) => setCategory(itemValue)}
-                            style={modalStyles.picker}
+                            style={styles.picker}
                         >
                             <Picker.Item label="Select category" value="" />
                             <Picker.Item label="Travel" value="travel" />
                             <Picker.Item label="Food" value="food" />
-                            {/* Add more categories here */}
                         </Picker>
 
-                        {/* Description */}
-                        <Text style={modalStyles.label}>Description</Text>
+                        <Text style={styles.label}>Description</Text>
                         <TextInput
-                            style={[modalStyles.input, modalStyles.textArea]}
+                            style={[styles.input, styles.textArea]}
                             placeholder="Description"
                             multiline={true}
                             value={description}
                             onChangeText={setDescription}
                         />
 
-                        {/* Buttons: Cancel & Save */}
-                        <View style={modalStyles.buttonContainer}>
+                        <View style={styles.buttonContainer}>
                             <TouchableOpacity
-                                style={modalStyles.cancelButton}
+                                style={styles.cancelButton}
                                 onPress={() => setModalVisible(false)}
                             >
-                                <Text style={modalStyles.cancelButtonText}>Cancel</Text>
+                                <Text style={styles.cancelButtonText}>Cancel</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={modalStyles.saveButton} onPress={handleSave}>
-                                <Text style={modalStyles.saveButtonText}>Save</Text>
+                            <TouchableOpacity style={styles.saveButton} onPress={handleSave}>
+                                <Text style={styles.saveButtonText}>Save</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -179,87 +175,4 @@ export default function LogExpense() {
     );
 }
 
-const modalStyles = StyleSheet.create({
-    modalOverlay: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    },
-    modalContainer: {
-      height:"90%",
-        backgroundColor: '#fff',
-        padding: 20,
-        borderRadius: 30,
-    },
-    modalTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        marginBottom: 15,
-    },
-    label: {
-        fontSize: 14,
-        fontWeight: 'bold',
-        marginBottom: 5,
-    },
-    input: {
-        borderWidth: 1,
-        borderColor: '#ddd',
-        borderRadius: 5,
-        padding: 10,
-        marginBottom: 15,
-    },
-    datePicker: {
-        borderWidth: 1,
-        borderColor: '#ddd',
-        borderRadius: 5,
-        padding: 10,
-        justifyContent: 'center',
-        marginBottom: 15,
-    },
-    row: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginBottom: 15,
-    },
-    rowItem: {
-        flex: 0.48,
-    },
-    picker: {
-        borderWidth: 1,
-        borderColor: '#ddd',
-        borderRadius: 5,
-    },
-    textArea: {
-        height: 80,
-        textAlignVertical: 'top',
-    },
-    buttonContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
-    cancelButton: {
-        borderWidth: 1,
-        borderColor: '#4A90E2',
-        borderRadius: 5,
-        padding: 15,
-        flex: 0.48,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    cancelButtonText: {
-        color: '#4A90E2',
-        fontWeight: 'bold',
-    },
-    saveButton: {
-        backgroundColor: '#4A90E2',
-        borderRadius: 5,
-        padding: 15,
-        flex: 0.48,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    saveButtonText: {
-        color: '#fff',
-        fontWeight: 'bold',
-    },
-});
+

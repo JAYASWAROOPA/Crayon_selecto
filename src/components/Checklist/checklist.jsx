@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import Check_fill from '../assets/icons/Check_filled';   // Correct import for filled check icon
-import Check_outline from '../assets/icons/Check_outline';  // Correct import for outline check icon
-import { styles } from './Styles1';
+import Check_fill from '../../assets/icons/Check_filled';
+import Check_outline from '../../assets/icons/Check_outline';  
+import { styles } from './styleChecklist';
 export default function Checklist() {
   const [tasks, setTasks] = useState([
     { id: 1, label: 'Creating IA for project management', completed: false,bottom:true },

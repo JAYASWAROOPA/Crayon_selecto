@@ -1,11 +1,7 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View ,ScrollView} from 'react-native';
 import React from 'react';
-import Appbar from '../../components/Appbar';
-import Status from '../../components/Status';
-import Designcontainer from '../../components/Designcontainer1';
-import MembersModel from '../../components/Membersmodel';
-import AssetsList from '../../components/AssetsList';
-import { ScrollView } from 'react-native-gesture-handler';
+import {Appbar,Status,DesignContainer1,MembersModel,AssetList} from '../../components'
+
 import { styles } from './Metana_style';
 import Right from '../../assets/icons/right';
 export default function Metanas_ui_design() {
@@ -13,10 +9,10 @@ export default function Metanas_ui_design() {
     <>
     <Appbar title={"Metanas UI Design"} />
     <ScrollView>
-      <Designcontainer title={"Project Info"} />
+      <DesignContainer1 title={"Project Info"} />
       <Status />
       <MembersModel title={"Members"}/>
-      <AssetsList />
+      <AssetList />
       <TouchableOpacity style={styles.container}>
         <View style={styles.row}>
           <Text style={styles.text}>Documents</Text>

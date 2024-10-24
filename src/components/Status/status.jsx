@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React from 'react';
-import Right from '../assets/icons/right';
-import Down from '../assets/icons/down';
+import Right from '../../assets/icons/right';
+import Down from '../../assets/icons/down';
 import { useNavigation } from '@react-navigation/native';
-import { styles } from './Styles1';
+import { styles } from './styleStatus';
 
 export default function Status() {
   const navigation = useNavigation();

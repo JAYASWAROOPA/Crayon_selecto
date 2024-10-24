@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TextInput, Image, StyleSheet } from 'react-native';
-import { styles } from './Styles1';
+import { styles } from './styleComment';
 const CommentSection = () => {
   return (
     <View style={styles.container}>
@@ -8,7 +8,7 @@ const CommentSection = () => {
       
       <View style={styles.comment}>
         <Image
-          source={require('../assets/images/boy1.png')}
+          source={require('../../assets/images/boy1.png')}
           style={styles.avatar2}
         />
         <View style={styles.commentContent}>
@@ -24,7 +24,7 @@ const CommentSection = () => {
       
       <View style={styles.comment}>
         <Image
-          source={require('../assets/images/men2.png')}
+          source={require('../../assets/images/men2.png')}
           style={styles.avatar2}
         />
         <View style={styles.commentContent}>
