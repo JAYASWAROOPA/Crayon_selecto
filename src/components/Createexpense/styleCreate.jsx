@@ -32,18 +32,21 @@ export const styles = StyleSheet.create({
         elevation: 5,
     },
     title: {
+        fontFamily: "Poppins-SemiBold",
         fontSize: 22,
         fontWeight: '700',
         marginBottom: 20,
         color: '#333',
     },
     label: {
+        fontFamily: "Poppins-SemiBold",
         fontSize: 16,
         fontWeight: '500',
         marginBottom: 8,
         color: '#555',
     },
     input: {
+        fontFamily: "Poppins-SemiBold",
         borderWidth: 1,
         borderColor: '#ddd',
         borderRadius: 12,
@@ -55,6 +58,7 @@ export const styles = StyleSheet.create({
         color: '#333',
     },
     datePicker: {
+        fontFamily: "Poppins-SemiBold",
         borderWidth: 1,
         borderColor: '#ddd',
         borderRadius: 12,
@@ -73,6 +77,7 @@ export const styles = StyleSheet.create({
         flex: 0.48,
     },
     picker: {
+        fontFamily: "Poppins-SemiBold",
         borderWidth: 1,
         borderColor: '#ddd',
         borderRadius: 12,
@@ -84,6 +89,7 @@ export const styles = StyleSheet.create({
         marginBottom: 15,
     },
     checkbox: {
+        fontFamily: "Poppins-SemiBold",
         width: 20,
         height: 20,
         borderWidth: 1,
@@ -93,10 +99,12 @@ export const styles = StyleSheet.create({
         backgroundColor: '#fafafa',
     },
     checkboxLabel: {
+         fontFamily: "Poppins-SemiBold",
         fontSize: 14,
         color: '#555',
     },
     textArea: {
+        fontFamily: "Poppins-SemiBold",
         height: 80,
         textAlignVertical: 'top',
     },
@@ -111,6 +119,7 @@ export const styles = StyleSheet.create({
         backgroundColor: '#fafafa',
     },
     uploadButtonText: {
+        fontFamily: "Poppins-SemiBold",
         color: '#4A90E2',
         fontWeight: '600',
     },

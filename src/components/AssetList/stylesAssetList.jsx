@@ -39,6 +39,7 @@ export const styles = StyleSheet.create({
         backgroundColor: '#E4E6EB', 
       },
       assetName: {
+        fontFamily: "Poppins-SemiBold",
         marginTop: 5,
         fontSize: 14,
         fontWeight: '500',

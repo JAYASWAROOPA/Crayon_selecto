@@ -70,7 +70,7 @@ export const styles = StyleSheet.create({
       taskDetails: {
         color: '#999',
         marginTop: 10,
-        fontFamily:'Poppins-Medium'
+        
       },
       taskStatus: {
         flexDirection:"row",

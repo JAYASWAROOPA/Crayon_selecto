@@ -23,11 +23,13 @@ export const styles = StyleSheet.create({
         marginTop: 10,
       },
       projectDescription: {
+        fontFamily: "Poppins-Medium",
         fontSize: 14,
         color: '#666',
         marginTop: 5,
       },
       seeMoreText: {
+        fontFamily: "Poppins-Medium",
         color: '#FFA500',
         fontSize: 14,
       },
@@ -44,15 +46,18 @@ export const styles = StyleSheet.create({
         alignItems: 'flex-end',
       },
       dateTitle: {
+        fontFamily: "Poppins-Medium",
         fontSize: 12,
         color: '#999',
       },
       dateTitle2: {
+        fontFamily: "Poppins-Medium",
         fontSize: 12,
         color: '#999',
         right:80
       },
       dateText: {
+        fontFamily: "Poppins-SemiBold",
         fontSize: 14,
         fontWeight: '600',
         color: '#333',
@@ -69,6 +74,7 @@ export const styles = StyleSheet.create({
         borderRadius: 40,
       },
       percentageText: {
+        fontFamily: "Poppins-SemiBold",
         marginLeft: 10,
         color: '#333',
         fontWeight: '600',

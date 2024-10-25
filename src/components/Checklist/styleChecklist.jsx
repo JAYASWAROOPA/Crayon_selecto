@@ -19,11 +19,13 @@ export const styles = StyleSheet.create({
         marginBottom: 10,
       },
       headerText: {
+        fontFamily: "Poppins-SemiBold",
         fontSize: 16,
         fontWeight: 'bold',
         color: '#333',
       },
       taskCountText: {
+        fontFamily: "Poppins-SemiBold",
         fontSize: 12,
         color: '#1E3A8A',
         fontWeight: 'bold',
@@ -40,6 +42,7 @@ export const styles = StyleSheet.create({
         marginRight: 10,
       },
       taskLabel: {
+        fontFamily: "Poppins-SemiBold",
         fontSize: 14,
         color: '#333',
       },

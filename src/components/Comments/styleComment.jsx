@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
        
       },
   comment: {
+    fontFamily: "Poppins-Medium",
     flexDirection: 'row',
     marginBottom: 10,
   },
@@ -31,17 +32,21 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   commentAuthor: {
+    fontFamily: "Poppins-Medium",
     fontWeight: 'bold',
   },
   commentTime: {
+    fontFamily: "Poppins-Mediyn",
     fontSize: 12,
     color: 'gray',
     marginBottom: 5,
   },
   commentText: {
+    fontFamily: "Poppins-Medium",
     fontSize: 14,
   },
   input: {
+    fontFamily: "Poppins-SemiBold",
     borderWidth: 1,
     borderColor: '#ddd',
     borderRadius: 25,

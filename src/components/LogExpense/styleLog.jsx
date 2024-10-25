@@ -45,13 +45,6 @@ export const styles = StyleSheet.create({
       commentText: {
         fontSize: 14,
       },
-      input: {
-        borderWidth: 1,
-        borderColor: '#ddd',
-        borderRadius: 25,
-        padding: 10,
-        marginTop: 10,
-      },
       taskCount1: {
         backgroundColor: '#E0E7FF',
         borderRadius: 12,
@@ -109,24 +102,23 @@ export const styles = StyleSheet.create({
         marginBottom: 15,
     },
     label: {
-        fontSize: 14,
-        fontWeight: 'bold',
-        marginBottom: 5,
+        fontSize: 12,
+        left:5,
+        color:'grey'
     },
-    input: {
-        borderWidth: 1,
-        borderColor: '#ddd',
-        borderRadius: 5,
-        padding: 10,
-        marginBottom: 15,
-    },
+    viewbox:{
+      borderWidth: 1,
+      borderColor: "#ddd",
+      borderRadius: 5,
+      paddingTop: 13,
+      paddingHorizontal: 15,
+      marginBottom:20
+   },
     datePicker: {
-        borderWidth: 1,
-        borderColor: '#ddd',
-        borderRadius: 5,
-        padding: 10,
+        
+        padding: 8,
         justifyContent: 'center',
-        marginBottom: 15,
+        marginBottom: 10,
     },
     row: {
         flexDirection: 'row',
@@ -134,25 +126,41 @@ export const styles = StyleSheet.create({
         marginBottom: 15,
     },
     rowItem: {
-        flex: 0.48,
+      borderWidth: 1,
+      borderColor: '#ddd',
+      borderRadius: 5,
+      flex: 0.48,
+      paddingTop:13,
+      paddingHorizontal:15,
     },
     picker: {
         borderWidth: 1,
         borderColor: '#ddd',
         borderRadius: 5,
     },
+    input:{
+       fontSize:13,
+       fontWeight:'500',
+      
+    },
     textArea: {
-        height: 80,
+      top:8,
+        height: 60,
         textAlignVertical: 'top',
     },
     buttonContainer: {
+        paddingTop:20,
+        top:70,
+        borderTopWidth:1,
+        borderTopColor:"lightgrey",
+        justifyContent:"flex-end",
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
     cancelButton: {
         borderWidth: 1,
         borderColor: '#4A90E2',
-        borderRadius: 5,
+        borderRadius: 10,
         padding: 15,
         flex: 0.48,
         alignItems: 'center',
@@ -164,7 +172,7 @@ export const styles = StyleSheet.create({
     },
     saveButton: {
         backgroundColor: '#4A90E2',
-        borderRadius: 5,
+        borderRadius: 10,
         padding: 15,
         flex: 0.48,
         alignItems: 'center',
