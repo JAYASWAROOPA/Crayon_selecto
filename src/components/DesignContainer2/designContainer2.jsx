@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
-import Down from '../../assets/icons/down';
-import { styles } from './styleDesign2';
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import Down from "../../assets/icons/down";
+import { styles } from "./styleDesign2";
 export default function DesignContainer2() {
   const [showFullText, setShowFullText] = useState(false);
 
@@ -11,26 +11,26 @@ export default function DesignContainer2() {
 
   return (
     <View style={styles.container}>
-      <View style={{flexDirection:"row",justifyContent:"space-between"}}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.headerText}>Task Info • </Text>
-        <Text style={styles.dateText}> 05/09/23</Text>
-      </View>
-      <View style={styles.statusContainer}>
-        <Text style={styles.statusText}>Yet to start</Text>
-        <Down/>
-      </View>
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View style={styles.headerContainer}>
+          <Text style={styles.headerText}>Task Info • </Text>
+          <Text style={styles.dateText}> 05/09/23</Text>
+        </View>
+        <View style={styles.statusContainer}>
+          <Text style={styles.statusText}>Yet to start</Text>
+          <Down />
+        </View>
       </View>
       <View>
         <Text style={styles.descriptionLabel}>Description</Text>
         <Text style={styles.projectDescription}>
           {showFullText
-            ? 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.'
-            : 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blandi...'}
+            ? "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+            : "At vero eos et accusamus et iusto odio dignissimos ducimus qui blandi..."}
         </Text>
         <TouchableOpacity onPress={toggleDescription}>
           <Text style={styles.seeMoreText}>
-            {showFullText ? 'See less' : 'See more'}
+            {showFullText ? "See less" : "See more"}
           </Text>
         </TouchableOpacity>
       </View>
@@ -51,4 +51,3 @@ export default function DesignContainer2() {
     </View>
   );
 }
-

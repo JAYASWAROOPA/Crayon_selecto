@@ -1,14 +1,19 @@
-import { StyleSheet, Text, View, TouchableOpacity, ProgressBarAndroid } from 'react-native';
-import {React,useState} from 'react';
-import { styles } from './styleDesign1';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ProgressBarAndroid,
+} from "react-native";
+import { React, useState } from "react";
+import { styles } from "./styleDesign1";
 export default function Designcontainer1({ title }) {
-    const [showFullText, setShowFullText] = useState(false);
-    const toggleDescription = () => {
-      setShowFullText(!showFullText);
-    };
+  const [showFullText, setShowFullText] = useState(false);
+  const toggleDescription = () => {
+    setShowFullText(!showFullText);
+  };
   return (
     <View style={styles.container}>
-      
       <View>
         <Text style={styles.headertext}>{title}</Text>
       </View>
@@ -16,12 +21,12 @@ export default function Designcontainer1({ title }) {
         <Text style={styles.descriptionText}>Description</Text>
         <Text style={styles.projectDescription}>
           {showFullText
-            ? 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.'
-            : 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blandi...'}
+            ? "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+            : "At vero eos et accusamus et iusto odio dignissimos ducimus qui blandi..."}
         </Text>
         <TouchableOpacity onPress={toggleDescription}>
           <Text style={styles.seeMoreText}>
-            {showFullText ? 'See less' : 'See more'}
+            {showFullText ? "See less" : "See more"}
           </Text>
         </TouchableOpacity>
       </View>
@@ -51,4 +56,3 @@ export default function Designcontainer1({ title }) {
     </View>
   );
 }
-

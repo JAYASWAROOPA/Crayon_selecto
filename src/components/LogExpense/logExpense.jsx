@@ -155,17 +155,16 @@ export default function LogExpense() {
                 <Picker.Item label="Food" value="food" />
               </Picker>
             </View>
-<View style={[styles.viewbox,{}]}>
-<Text style={styles.label}>Description</Text>
-            <TextInput
-              style={[styles.input, styles.textArea]}
-              placeholder="Description"
-              multiline={true}
-              value={description}
-              onChangeText={setDescription}
-            />
-</View>
-            
+            <View style={[styles.viewbox, {}]}>
+              <Text style={styles.label}>Description</Text>
+              <TextInput
+                style={[styles.input, styles.textArea]}
+                placeholder="Description"
+                multiline={true}
+                value={description}
+                onChangeText={setDescription}
+              />
+            </View>
 
             <View style={styles.buttonContainer}>
               <TouchableOpacity

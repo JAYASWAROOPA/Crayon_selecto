@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import React from 'react';
-import Right from '../../assets/icons/right';
-import Down from '../../assets/icons/down';
-import { useNavigation } from '@react-navigation/native';
-import { styles } from './styleStatus';
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import React from "react";
+import Right from "../../assets/icons/right";
+import Down from "../../assets/icons/down";
+import { useNavigation } from "@react-navigation/native";
+import { styles } from "./styleStatus";
 
 export default function Status() {
   const navigation = useNavigation();
   const handleTaskClick = (title) => {
-    navigation.navigate('WorkSpace', { title }); 
+    navigation.navigate("WorkSpace", { title });
   };
 
   return (
@@ -24,7 +24,10 @@ export default function Status() {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity onPress={() => handleTaskClick({ title: 'Wireframes'})} style={styles.taskRow}>
+      <TouchableOpacity
+        onPress={() => handleTaskClick({ title: "Wireframes" })}
+        style={styles.taskRow}
+      >
         <View style={styles.taskInfo}>
           <Text style={styles.taskTitle}>Wireframes</Text>
           <Text style={styles.taskDetails}>ID 0214 • 05/09/23</Text>
@@ -35,7 +38,10 @@ export default function Status() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => handleTaskClick({ title: 'Inspection'})} style={styles.taskRow}>
+      <TouchableOpacity
+        onPress={() => handleTaskClick({ title: "Inspection" })}
+        style={styles.taskRow}
+      >
         <View style={styles.taskInfo}>
           <Text style={styles.taskTitle}>Inspection</Text>
           <Text style={styles.taskDetails}>ID 0212 • 04/09/23</Text>
@@ -46,7 +52,10 @@ export default function Status() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => handleTaskClick({ title: 'Base layout' })} style={styles.taskRownoborder}>
+      <TouchableOpacity
+        onPress={() => handleTaskClick({ title: "Base layout" })}
+        style={styles.taskRownoborder}
+      >
         <View style={styles.taskInfo}>
           <Text style={styles.taskTitle}>Base layout</Text>
           <Text style={styles.taskDetails}>ID 0201 • 02/09/23</Text>

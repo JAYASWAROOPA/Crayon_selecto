@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Button, StyleSheet, Modal } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import DateTimePicker from '@react-native-community/datetimepicker';
-import { styles } from './styleCreate';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Button,
+  StyleSheet,
+  Modal,
+} from "react-native";
+import { Picker } from "@react-native-picker/picker";
+import DateTimePicker from "@react-native-community/datetimepicker";
+import { styles } from "./styleCreate";
 const CreateExpense = () => {
-  const [expenseName, setExpenseName] = useState('');
+  const [expenseName, setExpenseName] = useState("");
   const [date, setDate] = useState(new Date());
-  const [currency, setCurrency] = useState('AED');
-  const [amount, setAmount] = useState('');
-  const [category, setCategory] = useState('');
-  const [description, setDescription] = useState('');
+  const [currency, setCurrency] = useState("AED");
+  const [amount, setAmount] = useState("");
+  const [category, setCategory] = useState("");
+  const [description, setDescription] = useState("");
   const [showDatePicker, setShowDatePicker] = useState(false);
 
   const handleDateChange = (event, selectedDate) => {
@@ -33,7 +41,10 @@ const CreateExpense = () => {
           />
 
           <Text style={styles.label}>Date *</Text>
-          <TouchableOpacity onPress={() => setShowDatePicker(true)} style={styles.datePicker}>
+          <TouchableOpacity
+            onPress={() => setShowDatePicker(true)}
+            style={styles.datePicker}
+          >
             <Text>{date.toLocaleDateString()}</Text>
           </TouchableOpacity>
           {showDatePicker && (
