@@ -1,5 +1,4 @@
-// commentStore.js
-import create from "zustand";
+import {create} from "zustand";
 
 export const useCommentStore = create((set) => ({
   comments: [

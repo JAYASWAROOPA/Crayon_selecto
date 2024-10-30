@@ -1,55 +1,49 @@
-import React from "react";
-import { View, Text, TextInput, Image, StyleSheet } from "react-native";
-import { styles } from "./styleComment";
+import React, { useState } from "react";
+import { View, Text, TextInput, Image, FlatList } from "react-native";
+import { useCommentStore } from "./commentStore"; 
+import { styles } from "./styleComment"; 
+
 const CommentSection = () => {
+  const [newComment, setNewComment] = useState("");
+  const { comments, addComment } = useCommentStore(); 
+  const handleAddComment = () => {
+    if (newComment.trim()) {
+      addComment(newComment); 
+      setNewComment("");
+    }
+  };
+
+  const renderComment = ({ item }) => (
+    <View style={styles.comment}>
+      <Image source={item.avatar} style={styles.avatar2} />
+      <View style={styles.commentContent}>
+        <View style={{ flexDirection: "row", justifyContent: "space-between", paddingBottom: 8 }}>
+          <Text style={styles.commentAuthor}>{item.author}</Text>
+          <Text style={styles.commentTime}>{item.time}</Text>
+        </View>
+        <Text style={styles.commentText}>{item.text}</Text>
+      </View>
+    </View>
+  );
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Comments</Text>
 
-      <View style={styles.comment}>
-        <Image
-          source={require("../../assets/images/boy1.png")}
-          style={styles.avatar2}
-        />
-        <View style={styles.commentContent}>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              paddingBottom: 8,
-            }}
-          >
-            <Text style={styles.commentAuthor}>Hamza</Text>
-            <Text style={styles.commentTime}>1 day ago</Text>
-          </View>
-          <Text style={styles.commentText}>
-            harum quidem rerum facilis est et expedita distinctio. Nam libero
-            tempore, cum nobis.
-          </Text>
-        </View>
-      </View>
+      <FlatList
+        data={comments}
+        renderItem={renderComment}
+        keyExtractor={(item) => item.id.toString()}
+        style={styles.commentsList}
+      />
 
-      <View style={styles.comment}>
-        <Image
-          source={require("../../assets/images/men2.png")}
-          style={styles.avatar2}
-        />
-        <View style={styles.commentContent}>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              paddingBottom: 8,
-            }}
-          >
-            <Text style={styles.commentAuthor}>Mohammed</Text>
-            <Text style={styles.commentTime}>12 hrs ago</Text>
-          </View>
-          <Text style={styles.commentText}>Sure, Thanks</Text>
-        </View>
-      </View>
-
-      <TextInput style={styles.input} placeholder="Add comments" />
+      <TextInput
+        style={styles.input}
+        placeholder="Add comments"
+        value={newComment}
+        onChangeText={setNewComment}
+        onSubmitEditing={handleAddComment} 
+      />
     </View>
   );
 };
